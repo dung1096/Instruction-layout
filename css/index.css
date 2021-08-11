@@ -1,0 +1,171 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.header {
+  background-color: #ff4f81;
+  color: #ffffff;
+}
+
+.header i {
+  margin: 0 0.5rem;
+}
+
+.header__left {
+  font-size: 1.6rem;
+}
+
+.header__right a i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #333333;
+  border: 1px solid #333333;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__right a i:hover {
+  background-color: #ff4f81;
+  border: 1px solid #ffffff;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.navbar-brand--logo h1 {
+  font-size: 3rem;
+  color: #000000;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.navbar-brand--logo h1 i {
+  margin-right: 1rem;
+}
+
+.navbar-brand--logo p {
+  font-size: 1.6rem;
+  color: #ff4f81;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.navbar-nav--menu {
+  margin-left: auto;
+}
+
+.navbar-nav--menu li {
+  margin-left: 2rem;
+}
+
+.navbar-nav--menu li a {
+  font-size: 1.6rem;
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navbar-nav--menu li a::after {
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: #ff4f81;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar-nav--menu li:hover a,
+.navbar-nav--menu li.active a {
+  color: #ff4f81;
+}
+
+.navbar-nav--menu li:hover a::after,
+.navbar-nav--menu li.active a::after {
+  width: 100%;
+}
+
+.carousel-indicators--config {
+  list-style-type: none;
+  margin-bottom: 10rem;
+}
+
+.carousel-indicators--config li {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.carousel-indicators--config li.active {
+  background-color: #ffffff;
+}
+
+.carousel-caption--config {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+.carousel-caption--config h1 {
+  font-size: 4.8rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.carousel-caption--config p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  margin: 1rem 0;
+}
+
+.carousel-caption--config .btn--read-more {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  border-radius: initial;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 1rem;
+}
+
+.carousel-caption--config .btn--read-more:hover {
+  background-color: #ff4f81;
+}
+/*# sourceMappingURL=index.css.map */

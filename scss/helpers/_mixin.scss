@@ -1,0 +1,34 @@
+//text
+@mixin text($fs, $c, $fw, $sp) {
+    font-size     : $fs;
+    color         : $c;
+    font-weight   : $fw;
+    letter-spacing: $sp;
+}
+
+//icon
+@mixin icon($w, $h, $lh, $bg, $bd, $fs, $c) {
+    width           : $w;
+    height          : $h;
+    line-height     : $lh;
+    background-color: $bg;
+    border          : 1px solid $bd;
+    font-size       : $fs;
+    color           : $c;
+    text-align      : center;
+}
+
+//size
+@mixin size($w, $h) {
+    width : $w;
+    height: $h;
+}
+
+//position absolute
+@mixin positionAbsolute ($t, $r, $b, $l) {
+    position: absolute;
+    top     : $t;
+    right   : $r;
+    bottom  : $b;
+    left    : $l;
+}

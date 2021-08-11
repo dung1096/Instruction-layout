@@ -1,0 +1,152 @@
+@import "./helpers/variable";
+@import "./helpers/function";
+@import "./helpers/mixin";
+
+* {
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+// HEADER
+.header {
+    background-color: bg("secondary");
+    color           : text("textWhite");
+
+    i {
+        margin: 0 0.5rem;
+    }
+
+    &__left {
+        font-size: fs("body");
+    }
+
+    &__right {
+        a i {
+            @include icon(3rem, 3rem, 3rem, bg("dark"), bd("bdDark"), fs("body"), text("textWhite"));
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: bg("secondary");
+                border          : 1px solid bd("bdWhite");
+            }
+        }
+    }
+}
+
+// NAVBAR
+.navbar {
+    background-color: bg("primary");
+
+    &-brand--logo {
+
+        h1 {
+            @include text(fs("h3"), text("textBlack"), fw("fwRegular"), 0.1rem);
+
+            i {
+                margin-right: 1rem;
+            }
+        }
+
+        p {
+            @include text(fs("body"), text("textSecondary"), fw("fwRegular"), 0.1rem);
+            text-transform: uppercase;
+        }
+    }
+
+    &-nav--menu {
+        margin-left: auto;
+
+        li {
+            margin-left: 2rem;
+
+            a {
+                @include text(fs("body"), text("textDark"), fw("fwBold"), 0.1rem);
+                text-transform: uppercase;
+                position      : relative;
+
+                &::after {
+                    @include size(0, 2px);
+                    @include positionAbsolute(auto, auto, 0, 0);
+                    content         : "";
+                    background-color: bg("secondary");
+                    transition      : all 0.5s;
+                }
+            }
+
+            &:hover a,
+            &.active a {
+                color: text("textSecondary");
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// CAROUSEL
+.carousel {
+    &-indicators--config {
+        list-style-type: none;
+        margin-bottom  : 10rem;
+
+        li {
+            @include size(1.5rem !important, 1.5rem !important);
+            border-radius: 50%;
+            margin       : 0.5rem;
+
+            &.active {
+                background-color: bg("white");
+            }
+        }
+
+    }
+
+    &-caption--config {
+        @include positionAbsolute(50%, auto, auto, 50%);
+        transform: translate(-50%, -50%);
+        width    : 60%;
+
+        h1 {
+            @include text(fs("title"), text("textWhite"), fw("fwRegular"), 0.1rem);
+        }
+
+        p {
+            @include text(fs("body"), text("textWhite"), fw("fwRegular"), 0.3rem);
+            margin: 1rem 0;
+        }
+
+        .btn--read-more {
+            @include text(fs("body"), text("textWhite"), fw("fwRegular"), 0.1rem);
+            border-radius: initial;
+            transition   : all 0.5s;
+            margin-top   : 1rem;
+
+            &:hover {
+                background-color: bg("secondary");
+            }
+        }
+    }
+}
+
+// EDUCATION
+// STATS
+// OFFER
+// TESTIMONIALS
+// EVENT
+// FOOTER

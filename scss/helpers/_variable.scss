@@ -1,0 +1,31 @@
+// background
+$bgColor:("primary":#ffffff,
+    "secondary": #ff4f81,
+    "white":#ffffff,
+    "dark":#333333, );
+
+// text color
+$textColor:("textSecondary": #ff4f81,
+    "textWhite":#ffffff,
+    "textBlack":#000000,
+    "textDark":#333333,
+);
+
+// border color
+$bdColor:("bdDark":#333333,
+    "bdWhite":#ffffff,
+    "bdBlack":#000000,
+);
+// font size
+$fontSize:("body":1.6rem,
+    "subTitle":1.8rem,
+    "title":4.8rem,
+    "h1":4rem,
+    "h2":3.5rem,
+    "h3":3rem,
+    "h4":2.5rem,
+    "h5":2rem, );
+// fonts weight
+$fontWeight: ("fwBold": 700,
+    "fwRegular": 500,
+);

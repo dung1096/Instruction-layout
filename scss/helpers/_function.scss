@@ -1,0 +1,43 @@
+//get color from bgColors Array
+@function bg($color) {
+    @if map-has-key($map: $bgColor, $key: $color) {
+        @return map-get($map: $bgColor, $key: $color);
+    }
+
+    @warn ("This color doesn't exist");
+    @return "";
+}
+
+//get text color from textColors Array
+@function text($color) {
+    @if map-has-key($map: $textColor, $key: $color) {
+        @return map-get($map: $textColor,
+            $key: $color);
+    }
+}
+
+//get border color from textColors Array
+@function bd($color) {
+    @if map-has-key($map: $bdColor, $key: $color) {
+        @return map-get($map: $bdColor,
+            $key: $color);
+    }
+}
+
+//get font size from fontSizes Array
+@function fs($fs) {
+    @if map-has-key($map: $fontSize, $key: $fs) {
+        @return map-get($map: $fontSize,
+            $key: $fs);
+    }
+}
+
+//get font weight from fontWeight Array
+@function fw($font) {
+    @if map-has-key($map: $fontWeight, $key: $font) {
+        @return map-get($map: $fontWeight, $key: $font);
+    }
+
+    @warn ("This font doesn't exist");
+    @return "";
+}
