@@ -21,6 +21,34 @@ p {
     margin: 0;
 }
 
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 5rem 0;
+}
+
+.title {
+    text-align: center;
+
+    h1 {
+        @include text(fs("h1"), text("textSecondary"), fw("fwSemiBold"), 0.1rem);
+        text-transform: uppercase;
+    }
+
+    p {
+        @include text(fs("subTitle"), text("textDark"), fw("fwRegular"), 0.3rem);
+        text-transform: capitalize;
+    }
+}
+
+.line {
+    @include size(100px, 2px);
+    background-color: bg("dark");
+    margin          : 3rem auto;
+}
+
 // HEADER
 .header {
     background-color: bg("secondary");
@@ -142,11 +170,136 @@ p {
             }
         }
     }
+
+    .modal-title--config {
+        @include text(fs("h4"), text("textSecondary"), fw("fwRegular"), 0.1rem);
+        text-transform: uppercase;
+    }
+
+    .btn-close--config {
+        @include size(0.5rem, 0.5rem);
+        @include positionAbsolute(1rem, 1rem, auto, auto);
+    }
+
+    .modal-body--config {
+        p {
+            @include text(fs("body-2"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+            text-align: justify;
+
+        }
+    }
 }
 
 // EDUCATION
+.education {
+
+    &__paragraph {
+        @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+        padding: 0 10rem;
+    }
+
+    &__content {
+        margin: 3rem auto;
+    }
+
+    &__item {
+        padding      : 2rem;
+        border-radius: 0;
+        border-color : bd("bdBlack");
+
+
+        &:nth-child(2) {
+            border-left : none;
+            border-right: none;
+        }
+
+        i {
+            @include icon(3rem, 3rem, 3rem, transparent, none, 3rem, text("textBlack"));
+        }
+
+        h2 {
+            @include text(fs("h4"), text("textSecondary"), fw("fwSemiBold"), 0.05rem);
+            margin: 2rem 0;
+        }
+
+        h3 {
+            @include text(fs("body"), text("textBlack"), fw("fwBold"), 0.05rem);
+            text-transform: uppercase;
+            margin        : 1rem 0;
+        }
+
+        p {
+            @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.05rem);
+        }
+    }
+}
+
 // STATS
+.stats {
+    background           : url(../img/banner2.jpg) 100% 100% no-repeat;
+    background-size      : cover;
+    background-attachment: fixed;
+
+    &__title {
+        p {
+            color: text("textWhite");
+        }
+    }
+
+    &__line {
+        background-color: bg("white");
+    }
+
+    &__item {
+        text-align: center;
+
+        i {
+            @include icon(4rem, 4rem, 4rem, transparent, none, 4rem, text("textWhite"));
+        }
+
+        h2 {
+            @include text(fs("h4"), text("textSecondary"), fw("fwSemiBold"), 0.05rem);
+            margin: 2rem 0;
+        }
+
+        p {
+            @include text(fs("h1"), text("textWhite"), fw("fwRegular"), 0.05rem);
+        }
+    }
+}
+
 // OFFER
+.offer {
+    &__item {
+        text-align: center;
+        border    : 1px solid bd("bdDark");
+        box-shadow: 0 0 1px 1px bd("bdLight");
+        padding   : 3rem;
+        cursor    : pointer;
+        transition: all 0.4s;
+
+        i {
+            @include icon(4rem, 4rem, 4rem, transparent, none, 4rem, text("textSecondary"));
+        }
+
+        h2 {
+            @include text(fs("subTitle"), text("textDark"), fw("fwRegular"), 0.05rem);
+            margin        : 2rem 0;
+            text-transform: uppercase
+        }
+
+        p {
+            @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.05rem);
+        }
+
+        &:hover {
+            background-color: bg("blue");
+            border          : 1px solid bd("bdBlue");
+            box-shadow      : 0 0 1px 1px bd("bdBlue");
+        }
+    }
+}
+
 // TESTIMONIALS
 // EVENT
 // FOOTER

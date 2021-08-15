@@ -2,10 +2,12 @@
 $bgColor:("primary":#ffffff,
     "secondary": #ff4f81,
     "white":#ffffff,
-    "dark":#333333, );
+    "dark":#333333,
+    "blue":#12ccc3, );
 
 // text color
-$textColor:("textSecondary": #ff4f81,
+$textColor:("textPrimary":#6b6b6b,
+    "textSecondary": #ff4f81,
     "textWhite":#ffffff,
     "textBlack":#000000,
     "textDark":#333333,
@@ -15,9 +17,12 @@ $textColor:("textSecondary": #ff4f81,
 $bdColor:("bdDark":#333333,
     "bdWhite":#ffffff,
     "bdBlack":#000000,
+    "bdLight":#ababab,
+    "bdBlue":#12ccc3,
 );
 // font size
-$fontSize:("body":1.6rem,
+$fontSize:("body-2":1.4rem,
+    "body":1.6rem,
     "subTitle":1.8rem,
     "title":4.8rem,
     "h1":4rem,
@@ -27,5 +32,6 @@ $fontSize:("body":1.6rem,
     "h5":2rem, );
 // fonts weight
 $fontWeight: ("fwBold": 700,
+    "fwSemiBold": 600,
     "fwRegular": 500,
 );
