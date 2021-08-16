@@ -3,7 +3,11 @@ $bgColor:("primary":#ffffff,
     "secondary": #ff4f81,
     "white":#ffffff,
     "dark":#333333,
-    "blue":#12ccc3, );
+    "blue":#12ccc3,
+    "dark-2":rgba(0, 0, 0, 0.7),
+    "dark-3":rgba(0, 0, 0, 0.3),
+    "dark-4":#141415,
+    "dark-5":#0f0f10, );
 
 // text color
 $textColor:("textPrimary":#6b6b6b,
@@ -11,6 +15,7 @@ $textColor:("textPrimary":#6b6b6b,
     "textWhite":#ffffff,
     "textBlack":#000000,
     "textDark":#333333,
+    "textGray":#8b8b96,
 );
 
 // border color
@@ -19,6 +24,8 @@ $bdColor:("bdDark":#333333,
     "bdBlack":#000000,
     "bdLight":#ababab,
     "bdBlue":#12ccc3,
+    "bdDark-2":rgba(0, 0, 0, 0.7),
+    "bdPink":#ff4f81,
 );
 // font size
 $fontSize:("body-2":1.4rem,

@@ -49,6 +49,27 @@ p {
     margin          : 3rem auto;
 }
 
+.slick-dots li {
+    button::before {
+        @include text(fs("body-2"), text("textSecondary"), fw("fwRegular"), 0.1rem);
+
+        &:hover {
+            color: text("textSecondary");
+        }
+    }
+
+    &.slick-active {
+        button::before {
+            color: text("textSecondary");
+        }
+    }
+}
+
+.slick-track {
+    display        : flex;
+    justify-content: space-between;
+}
+
 // HEADER
 .header {
     background-color: bg("secondary");
@@ -78,6 +99,10 @@ p {
 // NAVBAR
 .navbar {
     background-color: bg("primary");
+
+    .container {
+        padding: 0;
+    }
 
     &-brand--logo {
 
@@ -192,6 +217,7 @@ p {
 
 // EDUCATION
 .education {
+    background-color: bg("primary");
 
     &__paragraph {
         @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.1rem);
@@ -250,6 +276,10 @@ p {
         background-color: bg("white");
     }
 
+    &__content {
+        margin: 6rem auto 3rem;
+    }
+
     &__item {
         text-align: center;
 
@@ -270,6 +300,12 @@ p {
 
 // OFFER
 .offer {
+    background-color: bg("primary");
+
+    &__content {
+        margin: 6rem auto 3rem;
+    }
+
     &__item {
         text-align: center;
         border    : 1px solid bd("bdDark");
@@ -301,5 +337,142 @@ p {
 }
 
 // TESTIMONIALS
+.testimonials {
+    background           : url(../img/banner3.jpg) 100% 100% no-repeat;
+    background-size      : cover;
+    background-attachment: fixed;
+
+    &__title {
+        p {
+            color: text("textWhite");
+        }
+    }
+
+    &__line {
+        background-color: bg("white");
+    }
+
+    &__content {
+        background-color: bg("dark-3");
+        box-shadow      : 0 0 1px 1px bd("bdLight");
+        padding         : 2rem;
+        margin          : 6rem auto 3rem;
+    }
+
+    &__item {
+        margin: 1rem;
+
+        p {
+            @include text(fs("body-2"), text("textWhite"), fw("fwRegular"), 0.05rem);
+            background-color: bg("dark-2");
+            padding         : 1rem;
+            border-radius   : 5px;
+            position        : relative;
+            margin-bottom   : 2rem;
+
+
+            &::after {
+                @include positionAbsolute(auto, auto, -1rem, 25%);
+                content     : "";
+                border-top  : 1rem solid bd("bdDark-2");
+                border-left : 1rem solid transparent;
+                border-right: 1rem solid transparent;
+            }
+        }
+
+        img {
+            @include size(6rem, 6rem);
+        }
+
+        h2 {
+            @include text(fs("body"), text("textWhite"), fw("fwRegular"), 0.05rem);
+        }
+
+        span {
+            @include text(fs("body-2"), text("textSecondary"), fw("fwRegular"), 0.05rem);
+        }
+    }
+}
+
 // EVENT
+.event {
+    background-color: bg("primary");
+
+    &__content {
+        margin: 6rem auto 3rem;
+    }
+
+    &__item {
+        h2 {
+            @include text(fs("subTitle"), text("textDark"), fw("fwBold"), 0.1rem);
+            text-transform: uppercase
+        }
+
+        h3 {
+            @include text(fs("body"), text("textSecondary"), fw("fwSemiBold"), 0.1rem);
+        }
+
+        p {
+            @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+        }
+    }
+
+}
+
 // FOOTER
+.footer {
+    background-color: bg("dark-4");
+
+    &__content {
+        h2 {
+            @include text(fs("h5"), text("textSecondary"), fw("fwRegular"), 0.1rem);
+        }
+
+        p {
+            @include text(fs("body-2"), text("textGray"), fw("fwRegular"), 0.1rem);
+        }
+    }
+
+    &__new {
+        i {
+            @include icon(3rem, 3rem, 3rem, transparent, transparent, fs("body"), text("textSecondary"));
+        }
+    }
+
+    &__contact {
+        i {
+            @include icon(3rem, 3rem, 3rem, transparent, bd("bdWhite"), fs("body"), text("textWhite"));
+            margin-right : 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__signUp {
+        input {
+            @include size(70%, 4rem);
+            @include text(fs("body-2"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+
+            &:focus {
+                outline: none
+            }
+        }
+
+        .btn-submit {
+            @include size(25%, 4rem);
+            @include button(bg("secondary"), bd("bdPink"), fs("body"), text("textWhite"), 0%);
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .copy-right {
+        background-color: bg("dark-5");
+
+        p {
+            @include text(fs("body-2"), text("textWhite"), fw("fwRegular"), 0.1rem);
+
+            span {
+                color: text("textSecondary");
+            }
+        }
+    }
+}

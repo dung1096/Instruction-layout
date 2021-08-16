@@ -52,6 +52,30 @@ p {
   margin: 3rem auto;
 }
 
+.slick-dots li button::before {
+  font-size: 1.4rem;
+  color: #ff4f81;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.slick-dots li button::before:hover {
+  color: #ff4f81;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #ff4f81;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .header {
   background-color: #ff4f81;
   color: #ffffff;
@@ -85,6 +109,10 @@ p {
 
 .navbar {
   background-color: #ffffff;
+}
+
+.navbar .container {
+  padding: 0;
 }
 
 .navbar-brand--logo h1 {
@@ -230,6 +258,10 @@ p {
   text-align: justify;
 }
 
+.education {
+  background-color: #ffffff;
+}
+
 .education__paragraph {
   font-size: 1.6rem;
   color: #6b6b6b;
@@ -302,6 +334,10 @@ p {
   background-color: #ffffff;
 }
 
+.stats__content {
+  margin: 6rem auto 3rem;
+}
+
 .stats__item {
   text-align: center;
 }
@@ -330,6 +366,14 @@ p {
   color: #ffffff;
   font-weight: 500;
   letter-spacing: 0.05rem;
+}
+
+.offer {
+  background-color: #ffffff;
+}
+
+.offer__content {
+  margin: 6rem auto 3rem;
 }
 
 .offer__item {
@@ -375,5 +419,185 @@ p {
   border: 1px solid #12ccc3;
   -webkit-box-shadow: 0 0 1px 1px #12ccc3;
           box-shadow: 0 0 1px 1px #12ccc3;
+}
+
+.testimonials {
+  background: url(../img/banner3.jpg) 100% 100% no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.testimonials__title p {
+  color: #ffffff;
+}
+
+.testimonials__line {
+  background-color: #ffffff;
+}
+
+.testimonials__content {
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 1px 1px #ababab;
+          box-shadow: 0 0 1px 1px #ababab;
+  padding: 2rem;
+  margin: 6rem auto 3rem;
+}
+
+.testimonials__item {
+  margin: 1rem;
+}
+
+.testimonials__item p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.testimonials__item p::after {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -1rem;
+  left: 25%;
+  content: "";
+  border-top: 1rem solid rgba(0, 0, 0, 0.7);
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+}
+
+.testimonials__item img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.testimonials__item h2 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.testimonials__item span {
+  font-size: 1.4rem;
+  color: #ff4f81;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.event {
+  background-color: #ffffff;
+}
+
+.event__content {
+  margin: 6rem auto 3rem;
+}
+
+.event__item h2 {
+  font-size: 1.8rem;
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.event__item h3 {
+  font-size: 1.6rem;
+  color: #ff4f81;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.event__item p {
+  font-size: 1.6rem;
+  color: #6b6b6b;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer {
+  background-color: #141415;
+}
+
+.footer__content h2 {
+  font-size: 2rem;
+  color: #ff4f81;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer__content p {
+  font-size: 1.4rem;
+  color: #8b8b96;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer__new i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 1.6rem;
+  color: #ff4f81;
+  text-align: center;
+}
+
+.footer__contact i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__signUp input {
+  width: 70%;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: #6b6b6b;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer__signUp input:focus {
+  outline: none;
+}
+
+.footer__signUp .btn-submit {
+  width: 25%;
+  height: 4rem;
+  background-color: #ff4f81;
+  border: 1px solid #ff4f81;
+  font-size: 1.6rem;
+  color: #ffffff;
+  border-radius: 0%;
+  margin-bottom: 0.5rem;
+}
+
+.footer .copy-right {
+  background-color: #0f0f10;
+}
+
+.footer .copy-right p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer .copy-right p span {
+  color: #ff4f81;
 }
 /*# sourceMappingURL=index.css.map */
