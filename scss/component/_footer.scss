@@ -1,0 +1,57 @@
+// FOOTER
+.footer {
+    background-color: bg("dark-4");
+
+    &__content {
+        h2 {
+            @include text(fs("h5"), text("textSecondary"), fw("fwRegular"), 0.1rem);
+        }
+
+        p {
+            @include text(fs("body-2"), text("textGray"), fw("fwRegular"), 0.1rem);
+        }
+    }
+
+    &__new {
+        i {
+            @include icon(3rem, 3rem, 3rem, transparent, transparent, fs("body"), text("textSecondary"));
+        }
+    }
+
+    &__contact {
+        i {
+            @include icon(3rem, 3rem, 3rem, transparent, bd("bdWhite"), fs("body"), text("textWhite"));
+            margin-right : 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__signUp {
+        input {
+            @include size(70%, 4rem);
+            @include text(fs("body-2"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+
+            &:focus {
+                outline: none
+            }
+        }
+
+        .btn-submit {
+            @include size(25%, 4rem);
+            @include button(bg("secondary"), bd("bdPink"), fs("body"), text("textWhite"), 0%);
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .copy-right {
+        background-color: bg("dark-5");
+
+        p {
+            @include text(fs("body-2"), text("textWhite"), fw("fwRegular"), 0.1rem);
+
+            span {
+                color: text("textSecondary");
+            }
+        }
+    }
+}

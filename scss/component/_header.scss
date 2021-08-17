@@ -1,0 +1,25 @@
+// HEADER
+.header {
+    background-color: bg("secondary");
+    color           : text("textWhite");
+
+    i {
+        margin: 0 0.5rem;
+    }
+
+    &__left {
+        font-size: fs("body");
+    }
+
+    &__right {
+        a i {
+            @include icon(3rem, 3rem, 3rem, bg("dark"), bd("bdDark"), fs("body"), text("textWhite"));
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: bg("secondary");
+                border          : 1px solid bd("bdWhite");
+            }
+        }
+    }
+}

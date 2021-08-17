@@ -1,0 +1,123 @@
+@import "./helpers/variable";
+@import "./helpers/function";
+@import "./helpers/mixin";
+
+@import "./base/reset";
+@import "./base/custom-bs";
+
+@import "./component/header";
+@import "./component/navbar";
+@import "./component/footer";
+@import "./component/title";
+
+// BANNER
+.banner {
+    background     : url(../img/banner1.jpg) center center no-repeat;
+    background-size: cover;
+    height         : 30rem;
+}
+
+// CONTACT
+.contact {
+    background-color: bg("primary");
+
+    &__info {
+        background-color: bg("dark-5");
+        padding         : 3rem;
+
+        h2 {
+            @include text(fs("subTitle"), text("textWhite"), fw("fwSemiBold"), 0.1rem);
+        }
+
+        i {
+            @include icon(5rem, 5rem, 5rem, transparent, bd("bdWhite"), fs("h5"), text("textWhite"));
+        }
+
+        h3 {
+            @include text(fs("body"), text("textSecondary"), fw("fwRegular"), 0.1rem);
+            padding-left: 2rem;
+        }
+
+        span {
+            @include text(fs("body-2"), text("textWhite"), fw("fwRegular"), 0.1rem);
+        }
+
+        &__social {
+
+            a {
+                margin-right: 0.5rem;
+
+                i {
+                    @include icon(3rem, 3rem, 3rem, bg("white"), transparent, fs("body-2"), text("textPrimary"));
+                    transition: all 0.4s;
+                }
+
+                &:first-child i {
+                    color: text("textFb");
+                }
+
+                &:nth-child(2) i {
+                    color: text("textTw");
+                }
+
+                &:last-child i {
+                    color: text("textRss");
+                }
+
+                &:hover {
+                    i {
+                        color: text("textWhite");
+                    }
+
+                    &:first-child i {
+                        background-color: bg("fb");
+                    }
+
+                    &:nth-child(2) i {
+                        background-color: bg("tw");
+                    }
+
+                    &:last-child i {
+                        background-color: bg("rss");
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        background     : url(../img/g11.jpg) 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+    &__form {
+
+        input,
+        textarea {
+            @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+            padding      : 1rem;
+            border-radius: 0%;
+            margin-bottom: 2rem;
+        }
+
+        .btn-submit {
+            @include button(bg("pink"), transparent, fs("body"), text("textWhite"), 0%);
+            padding: 1.5rem;
+            width  : 100%;
+
+            &:hover {
+                background-color: bg("secondary");
+            }
+        }
+    }
+
+    &__map {
+        background-color: bg("light");
+        padding         : 2rem;
+        width           : 100%;
+
+        iframe {
+            width: 100%;
+        }
+    }
+}

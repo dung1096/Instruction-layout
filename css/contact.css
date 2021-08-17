@@ -1,0 +1,372 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.container {
+  padding: 5rem 0;
+}
+
+.header {
+  background-color: #ff4f81;
+  color: #ffffff;
+}
+
+.header i {
+  margin: 0 0.5rem;
+}
+
+.header__left {
+  font-size: 1.6rem;
+}
+
+.header__right a i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #333333;
+  border: 1px solid #333333;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header__right a i:hover {
+  background-color: #ff4f81;
+  border: 1px solid #ffffff;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.navbar .container {
+  padding: 0;
+}
+
+.navbar-brand--logo h1 {
+  font-size: 3rem;
+  color: #000000;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.navbar-brand--logo h1 i {
+  margin-right: 1rem;
+}
+
+.navbar-brand--logo p {
+  font-size: 1.6rem;
+  color: #ff4f81;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.navbar-nav--menu {
+  margin-left: auto;
+}
+
+.navbar-nav--menu li {
+  margin-left: 2rem;
+}
+
+.navbar-nav--menu li a {
+  font-size: 1.6rem;
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navbar-nav--menu li a::after {
+  width: 0;
+  height: 2px;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: #ff4f81;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar-nav--menu li:hover a,
+.navbar-nav--menu li.active a {
+  color: #ff4f81;
+}
+
+.navbar-nav--menu li:hover a::after,
+.navbar-nav--menu li.active a::after {
+  width: 100%;
+}
+
+.footer {
+  background-color: #141415;
+}
+
+.footer__content h2 {
+  font-size: 2rem;
+  color: #ff4f81;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer__content p {
+  font-size: 1.4rem;
+  color: #8b8b96;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer__new i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 1.6rem;
+  color: #ff4f81;
+  text-align: center;
+}
+
+.footer__contact i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer__signUp input {
+  width: 70%;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: #6b6b6b;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer__signUp input:focus {
+  outline: none;
+}
+
+.footer__signUp .btn-submit {
+  width: 25%;
+  height: 4rem;
+  background-color: #ff4f81;
+  border: 1px solid #ff4f81;
+  font-size: 1.6rem;
+  color: #ffffff;
+  border-radius: 0%;
+  margin-bottom: 0.5rem;
+}
+
+.footer .copy-right {
+  background-color: #0f0f10;
+}
+
+.footer .copy-right p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.footer .copy-right p span {
+  color: #ff4f81;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 4rem;
+  color: #ff4f81;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.title p {
+  font-size: 1.8rem;
+  color: #333333;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: #333333;
+  margin: 3rem auto;
+}
+
+.banner {
+  background: url(../img/banner1.jpg) center center no-repeat;
+  background-size: cover;
+  height: 30rem;
+}
+
+.contact {
+  background-color: #ffffff;
+}
+
+.contact__info {
+  background-color: #0f0f10;
+  padding: 3rem;
+}
+
+.contact__info h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.contact__info i {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact__info h3 {
+  font-size: 1.6rem;
+  color: #ff4f81;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding-left: 2rem;
+}
+
+.contact__info span {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.contact__info__social a {
+  margin-right: 0.5rem;
+}
+
+.contact__info__social a i {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  font-size: 1.4rem;
+  color: #6b6b6b;
+  text-align: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact__info__social a:first-child i {
+  color: #3b5998;
+}
+
+.contact__info__social a:nth-child(2) i {
+  color: #1da1f2;
+}
+
+.contact__info__social a:last-child i {
+  color: #f26522;
+}
+
+.contact__info__social a:hover i {
+  color: #ffffff;
+}
+
+.contact__info__social a:hover:first-child i {
+  background-color: #3b5998;
+}
+
+.contact__info__social a:hover:nth-child(2) i {
+  background-color: #1da1f2;
+}
+
+.contact__info__social a:hover:last-child i {
+  background-color: #f26522;
+}
+
+.contact__img {
+  background: url(../img/g11.jpg) 100% 100% no-repeat;
+  background-size: cover;
+}
+
+.contact__form input,
+.contact__form textarea {
+  font-size: 1.6rem;
+  color: #6b6b6b;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+  border-radius: 0%;
+  margin-bottom: 2rem;
+}
+
+.contact__form .btn-submit {
+  background-color: #ec1955;
+  border: 1px solid transparent;
+  font-size: 1.6rem;
+  color: #ffffff;
+  border-radius: 0%;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.contact__form .btn-submit:hover {
+  background-color: #ff4f81;
+}
+
+.contact__map {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  width: 100%;
+}
+
+.contact__map iframe {
+  width: 100%;
+}
+/*# sourceMappingURL=contact.css.map */

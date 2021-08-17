@@ -1,0 +1,19 @@
+.title {
+    text-align: center;
+
+    h1 {
+        @include text(fs("h1"), text("textSecondary"), fw("fwSemiBold"), 0.1rem);
+        text-transform: uppercase;
+    }
+
+    p {
+        @include text(fs("subTitle"), text("textDark"), fw("fwRegular"), 0.3rem);
+        text-transform: capitalize;
+    }
+}
+
+.line {
+    @include size(100px, 2px);
+    background-color: bg("dark");
+    margin          : 3rem auto;
+}
