@@ -2,9 +2,9 @@
 .navbar {
     background-color: bg("primary");
 
-    .container {
-        padding: 0;
-    }
+    // .container {
+    //     padding: 0;
+    // }
 
     &-brand--logo {
 
@@ -50,6 +50,15 @@
                     width: 100%;
                 }
             }
+        }
+    }
+
+    &-toggler--config {
+        @include size(3rem, 3rem);
+
+        &:focus {
+            outline   : none;
+            box-shadow: 0 0 0 0;
         }
     }
 }

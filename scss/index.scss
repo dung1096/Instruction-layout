@@ -15,7 +15,7 @@
 .carousel {
     &-indicators--config {
         list-style-type: none;
-        margin-bottom  : 10rem;
+        margin-bottom  : 8%;
 
         li {
             @include size(1.5rem !important, 1.5rem !important);
@@ -72,6 +72,12 @@
 
         }
     }
+
+    @include responsive(878px) {
+        &-indicators--config {
+            margin-bottom: 4%;
+        }
+    }
 }
 
 // EDUCATION
@@ -90,7 +96,7 @@
     &__item {
         padding      : 2rem;
         border-radius: 0;
-        border-color : bd("bdBlack");
+        border       : 1px solid bd("bdBlack");
 
 
         &:nth-child(2) {
@@ -115,6 +121,14 @@
 
         p {
             @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.05rem);
+        }
+    }
+
+    @include responsive(rp("md")) {
+        &__item:nth-child(2) {
+            border       : 1px solid bd("bdBlack");
+            border-top   : none;
+            border-bottom: none;
         }
     }
 }
@@ -155,6 +169,12 @@
             @include text(fs("h1"), text("textWhite"), fw("fwRegular"), 0.05rem);
         }
     }
+
+    @include responsive(rp("md")) {
+        &__item h2 {
+            margin: 0.5rem 0;
+        }
+    }
 }
 
 // OFFER
@@ -166,6 +186,7 @@
     }
 
     &__item {
+        @include size(100%, 100%);
         text-align: center;
         border    : 1px solid bd("bdDark");
         box-shadow: 0 0 1px 1px bd("bdLight");
@@ -249,6 +270,18 @@
 
         span {
             @include text(fs("body-2"), text("textSecondary"), fw("fwRegular"), 0.05rem);
+        }
+    }
+
+    @include responsive(rp("md")) {
+        &__item p::after {
+            @include positionAbsolute(auto, auto, -1rem, 30%);
+        }
+    }
+
+    @include responsive(rp("sm")) {
+        &__item p::after {
+            @include positionAbsolute(auto, auto, -1rem, 40%);
         }
     }
 }

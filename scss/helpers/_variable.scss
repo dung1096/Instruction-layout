@@ -36,6 +36,7 @@ $bdColor:("bdDark":#333333,
     "bdDark-2":rgba(0, 0, 0, 0.7),
     "bdPink":#ff4f81,
 );
+
 // font size
 $fontSize:("body-2":1.4rem,
     "body":1.6rem,
@@ -45,9 +46,18 @@ $fontSize:("body-2":1.4rem,
     "h2":3.5rem,
     "h3":3rem,
     "h4":2.5rem,
-    "h5":2rem, );
+    "h5":2rem,
+);
+
 // fonts weight
 $fontWeight: ("fwBold": 700,
     "fwSemiBold": 600,
     "fwRegular": 500,
 );
+
+// break point
+$breakPoint:("sm":576px,
+    "md":768px,
+    "lg":992px,
+    "xl":1200px,
+)

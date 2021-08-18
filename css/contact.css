@@ -6,6 +6,24 @@ html {
   font-size: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 7px;
+  }
+}
+
 body {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -63,10 +81,6 @@ p {
 
 .navbar {
   background-color: #ffffff;
-}
-
-.navbar .container {
-  padding: 0;
 }
 
 .navbar-brand--logo h1 {
@@ -127,6 +141,17 @@ p {
 .navbar-nav--menu li:hover a::after,
 .navbar-nav--menu li.active a::after {
   width: 100%;
+}
+
+.navbar-toggler--config {
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar-toggler--config:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
 }
 
 .footer {
