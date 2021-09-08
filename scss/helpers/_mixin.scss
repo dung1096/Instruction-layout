@@ -18,6 +18,15 @@
     text-align      : center;
 }
 
+//button
+@mixin button($bg, $bd, $fs, $c, $br) {
+    background-color: $bg;
+    border          : 1px solid $bd;
+    font-size       : $fs;
+    color           : $c;
+    border-radius   : $br;
+}
+
 //size
 @mixin size($w, $h) {
     width : $w;
@@ -31,4 +40,12 @@
     right   : $r;
     bottom  : $b;
     left    : $l;
+}
+
+//responsive
+@mixin responsive($breakpoint) {
+    @media screen and (max-width:$breakpoint) {
+        @content
+    }
+
 }

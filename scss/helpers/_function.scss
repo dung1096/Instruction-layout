@@ -14,6 +14,9 @@
         @return map-get($map: $textColor,
             $key: $color);
     }
+
+    @warn ("This color doesn't exist");
+    @return "";
 }
 
 //get border color from textColors Array
@@ -22,6 +25,9 @@
         @return map-get($map: $bdColor,
             $key: $color);
     }
+
+    @warn ("This color doesn't exist");
+    @return "";
 }
 
 //get font size from fontSizes Array
@@ -30,6 +36,9 @@
         @return map-get($map: $fontSize,
             $key: $fs);
     }
+
+    @warn ("This font size doesn't exist");
+    @return "";
 }
 
 //get font weight from fontWeight Array
@@ -38,6 +47,16 @@
         @return map-get($map: $fontWeight, $key: $font);
     }
 
-    @warn ("This font doesn't exist");
+    @warn ("This font weight doesn't exist");
+    @return "";
+}
+
+//get break point from breakPoint Array
+@function rp($breakpoint) {
+    @if map-has-key($map: $breakPoint, $key: $breakpoint) {
+        @return map-get($map: $breakPoint, $key: $breakpoint);
+    }
+
+    @warn ("This break point doesn't exist");
     @return "";
 }

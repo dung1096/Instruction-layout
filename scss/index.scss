@@ -2,108 +2,20 @@
 @import "./helpers/function";
 @import "./helpers/mixin";
 
-* {
-    font-family: 'Open Sans',
-        sans-serif;
-}
+@import "./base/reset";
+@import "./base/custom-bs";
+@import "./base/custom-slick";
 
-html {
-    font-size: 10px;
-}
-
-body {
-    margin    : 0;
-    box-sizing: border-box;
-}
-
-h1,
-p {
-    margin: 0;
-}
-
-// HEADER
-.header {
-    background-color: bg("secondary");
-    color           : text("textWhite");
-
-    i {
-        margin: 0 0.5rem;
-    }
-
-    &__left {
-        font-size: fs("body");
-    }
-
-    &__right {
-        a i {
-            @include icon(3rem, 3rem, 3rem, bg("dark"), bd("bdDark"), fs("body"), text("textWhite"));
-            transition: all 0.5s;
-
-            &:hover {
-                background-color: bg("secondary");
-                border          : 1px solid bd("bdWhite");
-            }
-        }
-    }
-}
-
-// NAVBAR
-.navbar {
-    background-color: bg("primary");
-
-    &-brand--logo {
-
-        h1 {
-            @include text(fs("h3"), text("textBlack"), fw("fwRegular"), 0.1rem);
-
-            i {
-                margin-right: 1rem;
-            }
-        }
-
-        p {
-            @include text(fs("body"), text("textSecondary"), fw("fwRegular"), 0.1rem);
-            text-transform: uppercase;
-        }
-    }
-
-    &-nav--menu {
-        margin-left: auto;
-
-        li {
-            margin-left: 2rem;
-
-            a {
-                @include text(fs("body"), text("textDark"), fw("fwBold"), 0.1rem);
-                text-transform: uppercase;
-                position      : relative;
-
-                &::after {
-                    @include size(0, 2px);
-                    @include positionAbsolute(auto, auto, 0, 0);
-                    content         : "";
-                    background-color: bg("secondary");
-                    transition      : all 0.5s;
-                }
-            }
-
-            &:hover a,
-            &.active a {
-                color: text("textSecondary");
-
-                &::after {
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
+@import "./component/header";
+@import "./component/navbar";
+@import "./component/footer";
+@import "./component/title";
 
 // CAROUSEL
 .carousel {
     &-indicators--config {
         list-style-type: none;
-        margin-bottom  : 10rem;
+        margin-bottom  : 8%;
 
         li {
             @include size(1.5rem !important, 1.5rem !important);
@@ -142,11 +54,259 @@ p {
             }
         }
     }
+
+    .modal-title--config {
+        @include text(fs("h4"), text("textSecondary"), fw("fwRegular"), 0.1rem);
+        text-transform: uppercase;
+    }
+
+    .btn-close--config {
+        @include size(0.5rem, 0.5rem);
+        @include positionAbsolute(1rem, 1rem, auto, auto);
+    }
+
+    .modal-body--config {
+        p {
+            @include text(fs("body-2"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+            text-align: justify;
+
+        }
+    }
+
+    @include responsive(878px) {
+        &-indicators--config {
+            margin-bottom: 4%;
+        }
+    }
 }
 
 // EDUCATION
+.education {
+    background-color: bg("primary");
+
+    &__paragraph {
+        @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+        padding: 0 10rem;
+    }
+
+    &__content {
+        margin: 3rem auto;
+    }
+
+    &__item {
+        padding      : 2rem;
+        border-radius: 0;
+        border       : 1px solid bd("bdBlack");
+
+
+        &:nth-child(2) {
+            border-left : none;
+            border-right: none;
+        }
+
+        i {
+            @include icon(3rem, 3rem, 3rem, transparent, none, 3rem, text("textBlack"));
+        }
+
+        h2 {
+            @include text(fs("h4"), text("textSecondary"), fw("fwSemiBold"), 0.05rem);
+            margin: 2rem 0;
+        }
+
+        h3 {
+            @include text(fs("body"), text("textBlack"), fw("fwBold"), 0.05rem);
+            text-transform: uppercase;
+            margin        : 1rem 0;
+        }
+
+        p {
+            @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.05rem);
+        }
+    }
+
+    @include responsive(rp("md")) {
+        &__item:nth-child(2) {
+            border       : 1px solid bd("bdBlack");
+            border-top   : none;
+            border-bottom: none;
+        }
+    }
+}
+
 // STATS
+.stats {
+    background           : url(../img/banner2.jpg) 100% 100% no-repeat;
+    background-size      : cover;
+    background-attachment: fixed;
+
+    &__title {
+        p {
+            color: text("textWhite");
+        }
+    }
+
+    &__line {
+        background-color: bg("white");
+    }
+
+    &__content {
+        margin: 6rem auto 3rem;
+    }
+
+    &__item {
+        text-align: center;
+
+        i {
+            @include icon(4rem, 4rem, 4rem, transparent, none, 4rem, text("textWhite"));
+        }
+
+        h2 {
+            @include text(fs("h4"), text("textSecondary"), fw("fwSemiBold"), 0.05rem);
+            margin: 2rem 0;
+        }
+
+        p {
+            @include text(fs("h1"), text("textWhite"), fw("fwRegular"), 0.05rem);
+        }
+    }
+
+    @include responsive(rp("md")) {
+        &__item h2 {
+            margin: 0.5rem 0;
+        }
+    }
+}
+
 // OFFER
+.offer {
+    background-color: bg("primary");
+
+    &__content {
+        margin: 6rem auto 3rem;
+    }
+
+    &__item {
+        @include size(100%, 100%);
+        text-align: center;
+        border    : 1px solid bd("bdDark");
+        box-shadow: 0 0 1px 1px bd("bdLight");
+        padding   : 3rem;
+        cursor    : pointer;
+        transition: all 0.4s;
+
+        i {
+            @include icon(4rem, 4rem, 4rem, transparent, none, 4rem, text("textSecondary"));
+        }
+
+        h2 {
+            @include text(fs("subTitle"), text("textDark"), fw("fwRegular"), 0.05rem);
+            margin        : 2rem 0;
+            text-transform: uppercase
+        }
+
+        p {
+            @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.05rem);
+        }
+
+        &:hover {
+            background-color: bg("blue");
+            border          : 1px solid bd("bdBlue");
+            box-shadow      : 0 0 1px 1px bd("bdBlue");
+        }
+    }
+}
+
 // TESTIMONIALS
+.testimonials {
+    background           : url(../img/banner3.jpg) 100% 100% no-repeat;
+    background-size      : cover;
+    background-attachment: fixed;
+
+    &__title {
+        p {
+            color: text("textWhite");
+        }
+    }
+
+    &__line {
+        background-color: bg("white");
+    }
+
+    &__content {
+        background-color: bg("dark-3");
+        box-shadow      : 0 0 1px 1px bd("bdLight");
+        padding         : 2rem;
+        margin          : 6rem auto 3rem;
+    }
+
+    &__item {
+        margin: 1rem;
+
+        p {
+            @include text(fs("body-2"), text("textWhite"), fw("fwRegular"), 0.05rem);
+            background-color: bg("dark-2");
+            padding         : 1rem;
+            border-radius   : 5px;
+            position        : relative;
+            margin-bottom   : 2rem;
+
+
+            &::after {
+                @include positionAbsolute(auto, auto, -1rem, 25%);
+                content     : "";
+                border-top  : 1rem solid bd("bdDark-2");
+                border-left : 1rem solid transparent;
+                border-right: 1rem solid transparent;
+            }
+        }
+
+        img {
+            @include size(6rem, 6rem);
+        }
+
+        h2 {
+            @include text(fs("body"), text("textWhite"), fw("fwRegular"), 0.05rem);
+        }
+
+        span {
+            @include text(fs("body-2"), text("textSecondary"), fw("fwRegular"), 0.05rem);
+        }
+    }
+
+    @include responsive(rp("md")) {
+        &__item p::after {
+            @include positionAbsolute(auto, auto, -1rem, 30%);
+        }
+    }
+
+    @include responsive(rp("sm")) {
+        &__item p::after {
+            @include positionAbsolute(auto, auto, -1rem, 40%);
+        }
+    }
+}
+
 // EVENT
-// FOOTER
+.event {
+    background-color: bg("primary");
+
+    &__content {
+        margin: 6rem auto 3rem;
+    }
+
+    &__item {
+        h2 {
+            @include text(fs("subTitle"), text("textDark"), fw("fwBold"), 0.1rem);
+            text-transform: uppercase
+        }
+
+        h3 {
+            @include text(fs("body"), text("textSecondary"), fw("fwSemiBold"), 0.1rem);
+        }
+
+        p {
+            @include text(fs("body"), text("textPrimary"), fw("fwRegular"), 0.1rem);
+        }
+    }
+
+}
